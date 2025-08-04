@@ -11,11 +11,11 @@ test('zerostep example', async ({ page }) => {
   await ai('Enter "learning" as Password', aiArgs)
   await ai('Click Sign In', aiArgs)
   await page.waitForTimeout(8_000)
-  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)); // Scroll to the bottom of the page
   await ai('click Add button associated with "iphone X"',aiArgs)
   await ai('Go to the checkout page',aiArgs)
   await ai('click checkout button',aiArgs)
-  await ai('Enter ind in input',aiArgs)
+  await ai('Enter ind in input',aiArgs) // Enter "ind" in the input field
   await ai('Click India link',aiArgs)
   await ai('Select the checkbox',aiArgs)
   await ai('Click Purchase button', aiArgs)
